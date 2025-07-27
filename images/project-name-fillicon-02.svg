@@ -1,0 +1,30 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1246_1113)">
+<path d="M18.5 37C28.7173 37 37 28.7173 37 18.5C37 8.28273 28.7173 0 18.5 0C8.28273 0 0 8.28273 0 18.5C0 28.7173 8.28273 37 18.5 37Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M27.8516 14.416H24.543C24.0802 14.416 23.7051 14.7911 23.7051 15.2539V24.0625C23.7051 24.5253 24.0802 24.9004 24.543 24.9004H27.8516C28.3143 24.9004 28.6895 24.5253 28.6895 24.0625V15.2539C28.6895 14.7911 28.3143 14.416 27.8516 14.416Z" fill="black" stroke="black" style="fill:black;fill-opacity:1;stroke:black;stroke-opacity:1;" stroke-width="0.0429688"/>
+<path d="M13.5859 14.416H10.2773C9.81459 14.416 9.43945 14.7911 9.43945 15.2539V24.0625C9.43945 24.5253 9.81459 24.9004 10.2773 24.9004H13.5859C14.0487 24.9004 14.4238 24.5253 14.4238 24.0625V15.2539C14.4238 14.7911 14.0487 14.416 13.5859 14.416Z" fill="black" stroke="black" style="fill:black;fill-opacity:1;stroke:black;stroke-opacity:1;" stroke-width="0.0429688"/>
+<path d="M22.3515 11.0215H15.6484C15.1856 11.0215 14.8105 11.3966 14.8105 11.8594V24.0625C14.8105 24.5253 15.1856 24.9004 15.6484 24.9004H22.3515C22.8143 24.9004 23.1894 24.5253 23.1894 24.0625V11.8594C23.1894 11.3966 22.8143 11.0215 22.3515 11.0215Z" fill="black" stroke="black" style="fill:black;fill-opacity:1;stroke:black;stroke-opacity:1;" stroke-width="0.0429688"/>
+<path d="M19 17.8867C20.5662 17.8867 21.8359 16.617 21.8359 15.0508C21.8359 13.4846 20.5662 12.2149 19 12.2149C17.4338 12.2149 16.1641 13.4846 16.1641 15.0508C16.1641 16.617 17.4338 17.8867 19 17.8867Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M30 24.4922H8V26.125H30V24.4922Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M19 13.375V16.748" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-linecap="round"/>
+<path d="M17.2812 15.0508H20.6973" stroke="black" style="stroke:black;stroke-opacity:1;" stroke-linecap="round"/>
+<path d="M26.0898 16.2851H24.9297V17.4453H26.0898V16.2851Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M11.6523 16.2851H10.4922V17.4453H11.6523V16.2851Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M26.0898 18.2187H24.9297V19.3789H26.0898V18.2187Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M11.6523 18.2187H10.4922V19.3789H11.6523V18.2187Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M26.0898 20.1523H24.9297V21.3125H26.0898V20.1523Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M11.6523 20.1523H10.4922V21.3125H11.6523V20.1523Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M27.8516 16.2851H26.6914V17.4453H27.8516V16.2851Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M13.4141 16.2851H12.2539V17.4453H13.4141V16.2851Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M27.8516 18.2187H26.6914V19.3789H27.8516V18.2187Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M13.4141 18.2187H12.2539V19.3789H13.4141V18.2187Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M27.8516 20.1523H26.6914V21.3125H27.8516V20.1523Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M13.4141 20.1523H12.2539V21.3125H13.4141V20.1523Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M20.7187 20.1523H17.4531V24.75H20.7187V20.1523Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</g>
+<defs>
+<clipPath id="clip0_1246_1113">
+<rect width="37" height="37" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>

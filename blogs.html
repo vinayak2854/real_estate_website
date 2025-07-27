@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Real Estate Blog & News - Call Us Real Estate | Property Investment Tips
+    </title>
+    <meta
+      name="description"
+      content="Latest real estate insights, property investment tips, market trends in Thane & Mumbai. Expert advice on home buying, property prices, and investment opportunities."
+    />
+    <meta
+      name="keywords"
+      content="real estate blog, property investment tips, Thane property news, Mumbai real estate trends, home buying guide, property market analysis"
+    />
+    <link rel="canonical" href="https://callus-realestate.com/blogs.html" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Off-canvas Mobile Menu -->
+    <div id="mobileDrawer" class="offcanvas-menu">
+      <nav class="drawer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="drawer-actions">
+          <a href="#enquiry" class="drawer-btn enquire-btn"
+            ><i class="fas fa-file-alt me-2"></i>Enquire</a
+          >
+          <a href="tel:7888091619" class="drawer-btn phone-btn"
+            ><i class="fas fa-phone me-2"></i>7888091619</a
+          >
+        </div>
+      </nav>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Both buttons outside the drawer, same position -->
+    <button
+      class="drawer-hamburger d-lg-none"
+      id="drawerHamburger"
+      aria-label="Open menu"
+    >
+      <i class="fa fa-bars"></i>
+    </button>
+    <button
+      class="drawer-close d-lg-none"
+      id="drawerCloseBtn"
+      aria-label="Close menu"
+      style="display: none"
+    >
+      <i class="fa fa-times"></i>
+    </button>
+
+    <!-- Top Bar (visible md and up) -->
+    <div class="top-bar bg-dark text-white py-1 d-none d-md-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col text-start">
+            <span class="small"
+              ><i class="fas fa-envelope me-2"></i>info@call-us.in |
+              <i class="fas fa-map-marker-alt me-2"></i>1009 Padmanagar,
+              Bhiwandi, Thane-421305</span
+            >
+          </div>
+          <div class="col-auto text-end">
+            <a
+              href="https://facebook.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              title="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://linkedin.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://instagram.com/"
+              class="text-white me-3"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/919876543210"
+              class="text-white"
+              target="_blank"
+              rel="noopener"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center"
+          href="index.html"
+          style="gap: 0.5rem"
+        >
+          <img
+            src="images/rustomjee-thane-logo.webp"
+            alt="Call Us Logo"
+            style="
+              max-height: 48px;
+              width: auto;
+              display: inline-block;
+              vertical-align: middle;
+              object-fit: contain;
+            "
+          />
+        </a>
+
+        <!-- Remove the Bootstrap navbar-toggler button -->
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html"
+                ><i class="fas fa-building"></i> Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html"
+                ><i class="fas fa-star"></i> Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html"
+                ><i class="fas fa-blog"></i> Blogs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"
+                ><i class="fas fa-phone-alt"></i> Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center" data-aos="fade-up">
+            <h1 class="display-4 fw-bold mb-3">Blogs</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a href="index.html" class="text-white-50">Home</a>
+                </li>
+                <li class="breadcrumb-item active text-white">Blogs</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold">Latest Real Estate Insights</h2>
+          <p class="lead text-muted">
+            Stay updated with the latest trends and news in real estate
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="Ready to Move Flats in Thane"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    5 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  Explore Fully Customized Ready-to-Move-in Flats at Thane
+                </h5>
+                <p class="text-muted">
+                  Discover the best ready-to-move-in apartments in Thane with
+                  modern amenities, prime locations, and competitive pricing.
+                  Learn about the top projects and what makes them special.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=ready-to-move-flats-thane"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    1.2k views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="Dosti Greater Thane Affordable Luxury"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">15 Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    7 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  Dosti Greater Thane: ₹38.25 Lac For Inexpensive Luxury Living
+                </h5>
+                <p class="text-muted">
+                  Affordable luxury living at Dosti Greater Thane with
+                  world-class amenities, excellent connectivity, and flexible
+                  payment plans. Perfect for first-time home buyers.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=dosti-greater-thane-affordable-luxury"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    890 views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 3 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="Residential Projects in Thane"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    6 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  Dosti Greater Thane Residential Project
+                </h5>
+                <p class="text-muted">
+                  Complete overview of the upcoming residential project with
+                  detailed specifications, pricing, floor plans, and amenities.
+                  Everything you need to know before investing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=dosti-greater-thane-residential-project"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    1.5k views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 4 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="Real Estate Investment Tips 2025"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">10 Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    8 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  Top 10 Real Estate Investment Tips for 2025
+                </h5>
+                <p class="text-muted">
+                  Expert advice on making smart real estate investments in 2025.
+                  Learn about market trends, location analysis, and financial
+                  planning strategies.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=real-estate-investment-tips-2025"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    2.1k views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 5 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="First Time Home Buyer Guide"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">8 Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    10 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  First-Time Home Buyer's Complete Guide
+                </h5>
+                <p class="text-muted">
+                  Everything you need to know as a first-time home buyer. From
+                  budgeting and loan approval to property inspection and legal
+                  documentation.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=first-time-home-buyer-guide"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    1.8k views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 6 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div
+              class="blog-card bg-white rounded-3 shadow-sm overflow-hidden h-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80"
+                alt="Mumbai Real Estate Market Trends"
+                class="img-fluid"
+              />
+              <div class="p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">5 Jan. 2025</span>
+                  <span class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    6 min read
+                  </span>
+                </div>
+                <h5 class="fw-bold mb-3">
+                  Mumbai Real Estate Market Trends 2025
+                </h5>
+                <p class="text-muted">
+                  Analysis of current market trends in Mumbai and surrounding
+                  areas. Price predictions, demand patterns, and best areas for
+                  investment.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    href="blog-detail.html?id=mumbai-real-estate-market-trends-2025"
+                    class="btn btn-primary btn-sm"
+                    >Read More</a
+                  >
+                  <div class="text-muted small">
+                    <i class="fas fa-eye me-1"></i>
+                    1.3k views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Blog pagination" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern position-relative text-white py-4">
+      <div class="footer-bg-overlay"></div>
+      <div class="container position-relative">
+        <div class="row g-4 align-items-start animate-footer">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 fade-in-up">
+            <h5 class="fw-bold mb-3">About Us</h5>
+            <p class="footer-text">
+              We are your trusted real estate partner, helping families and
+              investors find their dream properties with transparency and care.
+              Discover your next home with us!
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="col-lg-2 col-md-6 mb-4 mb-lg-0 fade-in-up"
+            style="animation-delay: 0.1s"
+          >
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href="index.html"><i class="fas fa-home me-2"></i>Home</a>
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fas fa-users me-2"></i>About Us</a
+                >
+              </li>
+              <li>
+                <a href="projects.html"
+                  ><i class="fas fa-building me-2"></i>Projects</a
+                >
+              </li>
+              <li>
+                <a href="testimonials.html"
+                  ><i class="fas fa-comment-dots me-2"></i>Testimonials</a
+                >
+              </li>
+              <li>
+                <a href="blogs.html"><i class="fas fa-blog me-2"></i>Blogs</a>
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fas fa-envelope me-2"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 mb-4 mb-lg-0 fade-in-up"
+            style="animation-delay: 0.2s"
+          >
+            <h5 class="fw-bold mb-3">Contact</h5>
+            <ul class="list-unstyled footer-text">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>1009, Padmanagar,
+                Bhiwandi, Thane-421305
+              </li>
+              <li><i class="fas fa-phone me-2"></i>+880 123-456787</li>
+              <li><i class="fas fa-envelope me-2"></i>info@call-us.in</li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 fade-in-up"
+            style="animation-delay: 0.3s"
+          >
+            <h3 class="text-lg font-semibold mb-2 text-white">Recognitions</h3>
+            <p class="text-sm text-gray-300">
+              🏆 Top Rated Real Estate Agency 2024
+            </p>
+            <p class="text-sm text-gray-300">✅ RERA Registered & Verified</p>
+          </div>
+        </div>
+        <hr class="my-3 border-light opacity-50" />
+        <div class="text-center pb-1">
+          <p class="mb-0 footer-text small">
+            &copy; 2025 Call Us Real Estate. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+
+    <!-- Mobile FAB JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fabBtn = document.getElementById("mobileFabBtn");
+        const fabMenu = document.getElementById("mobileFabMenu");
+
+        if (fabBtn && fabMenu) {
+          fabBtn.addEventListener("click", function () {
+            fabMenu.classList.toggle("active");
+            fabBtn.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <!-- Redirect to home if accessed as default page -->
+    <script>
+      // Only redirect if user accessed root domain and got blogs.html as default
+      if (
+        window.location.pathname === "/" ||
+        (window.location.pathname === "/blogs.html" && !document.referrer)
+      ) {
+        window.location.replace("index.html");
+      }
+    </script>
+  </body>
+</html>
