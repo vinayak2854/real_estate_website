@@ -389,14 +389,15 @@
                 <label class="form-label">Phone</label>
                 <input type="tel" class="form-control" name="phone" required />
               </div>
-              <!-- <div class="mb-3">
+              <div class="mb-3">
                 <label class="form-label">Message</label>
                 <textarea
                   class="form-control"
                   name="message"
                   rows="3"
+                  required
                 ></textarea>
-              </div> -->
+              </div>
               <button type="submit" class="btn btn-primary w-100">
                 Submit Enquiry
               </button>
@@ -536,6 +537,7 @@
                 window.location.href = "thank-you.html";
               },
               function (error) {
+                console.log("EmailJS error:", error); // Added error logging
                 alert("Failed to send enquiry. Please try again.");
               }
             );
