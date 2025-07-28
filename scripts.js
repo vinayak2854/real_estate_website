@@ -113,6 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const forms = document.querySelectorAll('form[action*="formspree"]');
   forms.forEach((form) => {
     form.addEventListener("submit", function (e) {
+      const phoneInput = this.querySelector('input[name="phone"]');
+      if (phoneInput) {
+        const phoneValue = phoneInput.value.trim();
+        if (!/^\d{10}$/.test(phoneValue)) {
+          e.preventDefault();
+          showNotification(
+            "Please enter a valid 10-digit phone number.",
+            "danger"
+          );
+          phoneInput.focus();
+          return;
+        }
+      }
       e.preventDefault();
 
       const formData = new FormData(this);
@@ -370,17 +383,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize floating contact buttons
   function initializeFloatingContactButtons() {
     // Check if floating contact buttons container exists
-    const floatingButtonsContainer = document.getElementById("floatingContactButtons");
-    
+    const floatingButtonsContainer = document.getElementById(
+      "floatingContactButtons"
+    );
+
     if (floatingButtonsContainer) {
       // Update phone number and WhatsApp number to match the ones used in the site
-      const callButton = floatingButtonsContainer.querySelector('.floating-contact-btn.call');
-      const whatsappButton = floatingButtonsContainer.querySelector('.floating-contact-btn.whatsapp');
-      
+      const callButton = floatingButtonsContainer.querySelector(
+        ".floating-contact-btn.call"
+      );
+      const whatsappButton = floatingButtonsContainer.querySelector(
+        ".floating-contact-btn.whatsapp"
+      );
+
       if (callButton) {
         callButton.href = "tel:7888091619";
       }
-      
+
       if (whatsappButton) {
         whatsappButton.href = "https://wa.me/919876543210";
       }

@@ -892,6 +892,7 @@
                       class="form-control form-control-lg"
                       name="name"
                       required
+                      placeholder="Enter your name"
                     />
                   </div>
                   <div class="col-md-6">
@@ -901,6 +902,7 @@
                       class="form-control form-control-lg"
                       name="email"
                       required
+                      placeholder="Enter your email"
                     />
                   </div>
                   <div class="col-md-6">
@@ -910,6 +912,10 @@
                       class="form-control form-control-lg"
                       name="phone"
                       required
+                      placeholder="Enter your 10-digit phone number"
+                      pattern="[0-9]{10}"
+                      maxlength="10"
+                      minlength="10"
                     />
                   </div>
                   <div class="col-md-6">
@@ -1199,15 +1205,25 @@
     <!-- Floating Contact Buttons (Mobile Only) -->
     <div class="floating-contact-buttons" id="floatingContactButtons">
       <!-- Call Button -->
-      <a href="tel:7888091619" class="floating-contact-btn call" title="Call Us">
+      <a
+        href="tel:7888091619"
+        class="floating-contact-btn call"
+        title="Call Us"
+      >
         <div class="icon">
           <i class="fas fa-phone"></i>
         </div>
         <div class="text">Call</div>
       </a>
-      
+
       <!-- WhatsApp Button -->
-      <a href="https://wa.me/919876543210" class="floating-contact-btn whatsapp" title="WhatsApp Us" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://wa.me/919876543210"
+        class="floating-contact-btn whatsapp"
+        title="WhatsApp Us"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div class="icon">
           <i class="fab fa-whatsapp"></i>
         </div>
