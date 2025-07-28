@@ -583,53 +583,46 @@
       </div>
     </footer>
 
-    <!-- Sliding Contact Buttons -->
-    <div class="sliding-contact-buttons">
+    <!-- Floating Contact Buttons (Mobile Only) -->
+    <div class="floating-contact-buttons" id="floatingContactButtons">
+      <!-- Main FAB Button (Mobile) -->
+      <a
+        href="#"
+        class="floating-contact-btn fab-main"
+        title="Contact Options"
+        id="fabMain"
+      >
+        <div class="icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="text">Contact</div>
+      </a>
+
       <!-- Call Button -->
       <a
-        href="tel:7620824936"
-        class="contact-slide-btn call-btn"
+        href="tel:7888091619"
+        class="floating-contact-btn call fab-sub"
         title="Call Us"
       >
-        <div class="btn-content">
-          <div class="btn-icon">
-            <i class="fas fa-phone"></i>
-          </div>
+        <div class="icon">
+          <i class="fas fa-phone"></i>
         </div>
+        <div class="text">Call</div>
       </a>
 
       <!-- WhatsApp Button -->
       <a
-        href="https://wa.me/7620824936"
-        class="contact-slide-btn whatsapp-btn"
+        href="https://wa.me/919876543210"
+        class="floating-contact-btn whatsapp fab-sub"
         title="WhatsApp Us"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <div class="btn-content">
-          <div class="btn-icon">
-            <i class="fab fa-whatsapp"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Mobile FAB Button -->
-    <div class="mobile-fab-container">
-      <button class="mobile-fab-btn" id="mobileFabBtn">
-        <i class="fas fa-phone"></i>
-      </button>
-      <div class="mobile-fab-menu" id="mobileFabMenu">
-        <a href="tel:7620824936" class="mobile-fab-item call-item">
-          <i class="fas fa-phone"></i>
-        </a>
-        <a
-          href="https://wa.me/7620824936"
-          class="mobile-fab-item whatsapp-item"
-          target="_blank"
-        >
+        <div class="icon">
           <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
+        </div>
+        <div class="text">WhatsApp</div>
+      </a>
     </div>
 
     <!-- Bootstrap 5 JS -->

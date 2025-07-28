@@ -381,32 +381,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize floating contact buttons
-  function initializeFloatingContactButtons() {
-    // Check if floating contact buttons container exists
-    const floatingButtonsContainer = document.getElementById(
-      "floatingContactButtons"
-    );
-
-    if (floatingButtonsContainer) {
-      // Update phone number and WhatsApp number to match the ones used in the site
-      const callButton = floatingButtonsContainer.querySelector(
-        ".floating-contact-btn.call"
-      );
-      const whatsappButton = floatingButtonsContainer.querySelector(
-        ".floating-contact-btn.whatsapp"
-      );
-
-      if (callButton) {
-        callButton.href = "tel:7888091619";
-      }
-
-      if (whatsappButton) {
-        whatsappButton.href = "https://wa.me/919876543210";
-      }
-    }
-  }
-
-  // Initialize floating contact buttons
   initializeFloatingContactButtons();
 
   // Back to top button
@@ -414,18 +388,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const backToTopBtn = document.createElement("button");
     backToTopBtn.id = "backToTopBtn";
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopBtn.className = "btn btn-primary position-fixed";
+    backToTopBtn.className = "btn btn-primary position-fixed back-to-top-btn";
     backToTopBtn.style.cssText =
-      "bottom: 30px; right: 30px; z-index: 999; border-radius: 50%; width: 50px; height: 50px; display: none; pointer-events: auto;";
+      "bottom: 20px; right: 20px; z-index: 999; border-radius: 50%; width: 56px; height: 56px; opacity: 0; visibility: hidden; pointer-events: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);";
     backToTopBtn.onclick = () =>
       window.scrollTo({ top: 0, behavior: "smooth" });
     document.body.appendChild(backToTopBtn);
 
+    // Scroll-based visibility for back to top button
+    const scrollThreshold = 300;
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.style.display = "block";
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > scrollThreshold) {
+        backToTopBtn.style.opacity = "1";
+        backToTopBtn.style.visibility = "visible";
+        backToTopBtn.style.pointerEvents = "auto";
       } else {
-        backToTopBtn.style.display = "none";
+        backToTopBtn.style.opacity = "0";
+        backToTopBtn.style.visibility = "hidden";
+        backToTopBtn.style.pointerEvents = "none";
       }
     });
   }
@@ -1225,3 +1208,83 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 console.log("Scripts loaded successfully!");
+
+// Initialize floating contact buttons
+function initializeFloatingContactButtons() {
+  const floatingButtons = document.querySelector(".floating-contact-buttons");
+
+  if (!floatingButtons) {
+    console.log("Floating buttons container not found");
+    return;
+  }
+
+  console.log("Initializing floating contact buttons");
+
+  // Scroll-based visibility
+  let lastScrollTop = 0;
+  const scrollThreshold = 100; // Show after scrolling 100px
+
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > scrollThreshold) {
+      floatingButtons.classList.add("visible");
+    } else {
+      floatingButtons.classList.remove("visible");
+    }
+
+    lastScrollTop = scrollTop;
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", handleScroll);
+
+  // FAB toggle functionality for mobile
+  const fabMain = floatingButtons.querySelector(".fab-main");
+  console.log("FAB main button found:", !!fabMain);
+  console.log("Window width:", window.innerWidth);
+
+  if (fabMain) {
+    fabMain.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log("FAB main clicked");
+
+      floatingButtons.classList.toggle("expanded");
+
+      // Change icon based on state
+      const icon = this.querySelector(".icon i");
+      if (floatingButtons.classList.contains("expanded")) {
+        icon.className = "fas fa-times";
+        console.log("FAB expanded");
+      } else {
+        icon.className = "fas fa-phone";
+        console.log("FAB collapsed");
+      }
+    });
+
+    // Close FAB when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!floatingButtons.contains(e.target)) {
+        floatingButtons.classList.remove("expanded");
+        const icon = fabMain.querySelector(".icon i");
+        if (icon) icon.className = "fas fa-phone";
+      }
+    });
+  }
+
+  // Handle window resize
+  window.addEventListener("resize", function () {
+    console.log("Window resized to:", window.innerWidth);
+    if (window.innerWidth > 768) {
+      floatingButtons.classList.remove("expanded");
+      const icon = fabMain?.querySelector(".icon i");
+      if (icon) icon.className = "fas fa-phone";
+    }
+  });
+
+  // Initial check for mobile
+  if (window.innerWidth <= 768) {
+    console.log("Mobile detected, FAB should be active");
+  }
+}

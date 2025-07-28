@@ -1231,7 +1231,7 @@ html {
   .hero-happy-customers {
     gap: 0;
     min-width: 110px;
-    top: 80%;
+    top: 77%;
     left: 10%;
   }
   .happy-avatars img {
@@ -1672,9 +1672,16 @@ html {
   bottom: 20px;
   left: 20px;
   z-index: 1000;
-  display: flex; /* Visible on all devices */
+  display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.floating-contact-buttons.visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1814,47 +1821,115 @@ html {
   animation: none;
 }
 
-/* Adjust floating buttons for mobile devices */
+/* Mobile FAB Design */
 @media (max-width: 768px) {
   .floating-contact-buttons {
-    bottom: 4px;
+    bottom: 20px;
     left: 20px;
+    gap: 8px;
+    flex-direction: column-reverse;
   }
-}
 
-@media (max-width: 768px) {
   .floating-contact-btn {
-    padding: 12px 16px;
-    font-size: 13px;
-    min-width: 110px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 0;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
   }
 
   .floating-contact-btn .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .floating-contact-btn .icon i {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .floating-contact-btn .text {
+    display: none;
+  }
+
+  /* FAB Main Button */
+  .floating-contact-btn.fab-main {
+    background: linear-gradient(135deg, #3a506b 0%, #0056b3 100%);
+    box-shadow: 0 8px 25px rgba(58, 80, 107, 0.3);
+    z-index: 1001;
+    position: relative;
+  }
+
+  .floating-contact-btn.fab-main:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #3a506b 100%);
+    box-shadow: 0 12px 35px rgba(58, 80, 107, 0.4);
+  }
+
+  /* FAB Sub Buttons */
+  .floating-contact-btn.fab-sub {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(0) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+  }
+
+  .floating-contact-buttons.expanded .fab-sub {
+    transform: translateY(-70px) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .floating-contact-btn.fab-sub:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+
+  .floating-contact-btn.fab-sub:nth-child(3) {
+    transition-delay: 0.2s;
+    transform: translateY(-140px) scale(1);
+  }
+}
+
+/* Desktop: Hide main FAB, show only Call and WhatsApp */
+@media (min-width: 769px) {
+  .floating-contact-btn.fab-main {
+    display: none !important;
+  }
+
+  .floating-contact-btn.fab-sub {
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 }
 
 @media (max-width: 480px) {
+  .floating-contact-buttons {
+    bottom: 15px;
+    left: 15px;
+  }
+
   .floating-contact-btn {
-    padding: 10px 14px;
-    font-size: 12px;
-    min-width: 100px;
+    width: 52px;
+    height: 52px;
   }
 
   .floating-contact-btn .icon {
-    width: 22px;
-    height: 22px;
-    margin-right: 6px;
+    width: 28px;
+    height: 28px;
   }
 
   .floating-contact-btn .icon i {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -1895,3 +1970,43 @@ html {
     overflow: hidden;
   }
 } */
+
+/* Back to Top Button */
+.back-to-top-btn {
+  background: linear-gradient(135deg, #3a506b 0%, #0056b3 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 18px;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 8px 25px rgba(58, 80, 107, 0.3) !important;
+}
+
+.back-to-top-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #3a506b 100%) !important;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(58, 80, 107, 0.4) !important;
+  color: #fff !important;
+}
+
+.back-to-top-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Mobile adjustments for back to top button */
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    width: 52px !important;
+    height: 52px !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top-btn {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 14px;
+  }
+}
